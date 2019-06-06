@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件指令</title>
+    <!--introduce the angulars js-->
+    <script src="/plugins/angularjs/angular.min.js"></script>
+    <script>
+        //自定义模块
+        var app=angular.module("myApp",[]);
+        //自定义控制器
+        app.controller("myController",function($scope){
+            $scope.add=function(){
+              $scope.z= parseInt($scope.x)+parseInt($scope.y);//二者和定义另一变量
+            }
+        })
+    </script>
+</head>
+
+<body ng-app="myApp" ng-controller="myController">
+X:<input ng-model="x"><br>
+Y :<input ng-model="y"><br>
+<!--{{add()}}-->
+<!--不是直接调用控制器,而是绑定点击事件在需要的时候来调用-->
+<button ng-click="add()">计算X+Y:</button>
+{{z}}
+</body>
+</html>

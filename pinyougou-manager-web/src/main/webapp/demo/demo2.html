@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>控制器</title>
+    <!--introduce the angulars js-->
+    <script src="/plugins/angularjs/angular.min.js"></script>
+    <script>
+        /*定义模块 angular.module   $scope视图中所有变量都绑定在它上面*/
+
+        var app=angular.module("myApp",[]);
+        //定义控制器
+        app.controller("myController",function($scope){
+            $scope.add=function(){
+               return parseInt($scope.x)+parseInt($scope.y);//作数值加法运算
+               // return $scope.x+$scope.y;//返回字符串拼接结果
+            }
+        })
+    </script>
+</head>
+
+<body ng-app="myApp" ng-controller="myController">
+X:<input ng-model="x"><br>
+Y :<input ng-model="y"><br>
+{{add()}}
+
+</body>
+</html>

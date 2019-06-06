@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表达式</title>
+    <!--introduce the angulars js-->
+    <script src="/plugins/angularjs/angular.min.js"></script>
+</head>
+
+<body ng-app ng-init="myname='陈大海'">
+<!--ng-app angulars 第一个指令,计算-->
+自动计算:
+{{100+100}}
+<!--ng-init初始化命令,只能写在ng-app所在标签中,赋值 &方法调用-->
+<br>
+<br>
+<!--ng-model双向绑定指令-->
+myname:<input ng-model="myname"><br>
+
+<br>
+{{myname}},Good Night!
+</body>
+</html>

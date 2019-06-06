@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="punyougou-portal-web:war">
+    <output-path>$PROJECT_DIR$/punyougou-portal-web/target</output-path>
+    <root id="archive" name="punyougou-portal-web-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="punyougou-portal-web:war exploded" />
+    </root>
+  </artifact>
+</component>
